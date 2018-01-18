@@ -1,0 +1,35 @@
+{
+  "name": "pve",
+  "version": "0.0.1",
+  "description": "A seed project using Parcel, Vue and Element",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildwin": "npm run cleanwin && parcel build index.html -d docs --public-url ./ && npm run preview",
+    "buildmac": "npm run cleanmac && parcel build index.html -d docs --public-url ./ && npm run preview",
+    "cleanwin": "del /s /q docs && del /s /q dist && del /s /q .cache",
+    "cleanmac": "rm -rf .cache && rm -rf dist && rm -rf docs && parcel index.html",
+    "dev": "parcel index.html",
+    "preview": "npx http-server ./docs -o -a 127.0.0.1"
+  },
+  "keywords": [
+    "Parceljs",
+    "Parcel",
+    "Vue",
+    "VueJS",
+    "Element",
+    "ElementIO"
+  ],
+  "author": "Kory Schluter",
+  "license": "MIT",
+  "dependencies": {
+    "element-ui": "^2.0.11",
+    "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "parcel-bundler": "^1.4.1",
+    "parcel-plugin-vue": "^1.5.0"
+  }
+}
