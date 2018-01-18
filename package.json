@@ -5,21 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildwin": "npm run cleanwin && parcel build index.html -d docs --public-url ./ && npm run preview",
-    "buildmac": "npm run cleanmac && parcel build index.html -d docs --public-url ./ && npm run preview",
+    "buildwin": "npm run cleanwin && parcel build ./src/index.html -d docs --public-url ./ && npm run preview",
+    "buildmac": "npm run cleanmac && parcel build ./src/index.html -d docs --public-url ./ && npm run preview",
     "cleanwin": "del /s /q docs && del /s /q dist && del /s /q .cache",
     "cleanmac": "rm -rf .cache && rm -rf dist && rm -rf docs && parcel index.html",
-    "dev": "parcel index.html",
+    "dev": "parcel ./src/index.html",
     "preview": "npx http-server ./docs -o -a 127.0.0.1"
   },
-  "keywords": [
-    "Parceljs",
-    "Parcel",
-    "Vue",
-    "VueJS",
-    "Element",
-    "ElementIO"
-  ],
+  "keywords": ["Parceljs", "Parcel", "Vue", "VueJS", "Element", "ElementIO"],
   "author": "Kory Schluter",
   "license": "MIT",
   "dependencies": {
